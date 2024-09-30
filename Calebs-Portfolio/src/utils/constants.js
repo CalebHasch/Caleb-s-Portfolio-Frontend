@@ -1,5 +1,20 @@
+const baseUrl = "http://127.0.0.1:3000/src/assets/";
+
 const projectList = {
   projects: [
+    {
+      id: 0,
+      project_name: "Brickbreaker",
+      description: "The classic brickbreaker game.",
+      technologies: ["JavaScript", "HTML", "CSS"],
+      live_link: "https://calebhasch.github.io/brickbreaker/",
+      github_link: "https://github.com/CalebHasch/brickbreaker",
+      image_urls: [
+        `${baseUrl}project5(1).png`,
+        `${baseUrl}project5(2).png`,
+        `${baseUrl}project5(3).png`,
+      ],
+    },
     {
       id: 1,
       project_name: "A Random Quote Generator",
@@ -9,9 +24,9 @@ const projectList = {
       live_link: "https://calebhasch.github.io/Random-quote-generator/",
       github_link: "https://github.com/calebhasch/Random-quote-generator",
       image_urls: [
-        "/static/images/project1(1).jpg",
-        "/static/images/project1(2).png",
-        "/static/images/project1(3).png",
+        `${baseUrl}project1(1).jpg`,
+        `${baseUrl}project1(2).png`,
+        `${baseUrl}project1(3).png`,
       ],
     },
     {
@@ -24,9 +39,9 @@ const projectList = {
       github_link:
         "https://github.com/calebhasch/list-and-pagination-filtering",
       image_urls: [
-        "/static/images/project2(1).png",
-        "/static/images/project2(2).png",
-        "/static/images/project2(3).png",
+        `${baseUrl}project2(1).png`,
+        `${baseUrl}project2(2).png`,
+        `${baseUrl}project2(3).png`,
       ],
     },
     {
@@ -43,9 +58,9 @@ const projectList = {
       live_link: "https://calebhasch.github.io/interactive-form/",
       github_link: "https://github.com/calebhasch/interactive-form",
       image_urls: [
-        "/static/images/project3(1).png",
-        "/static/images/project3(2).png",
-        "/static/images/project3(3).png",
+        `${baseUrl}project3(1).png`,
+        `${baseUrl}project3(2).png`,
+        `${baseUrl}project3(3).png`,
       ],
     },
     {
@@ -57,9 +72,9 @@ const projectList = {
       live_link: "https://calebhasch.github.io/OOP-Game-Show-App/",
       github_link: "https://github.com/calebhasch/OOP-Game-Show-App",
       image_urls: [
-        "/static/images/project4(1).png",
-        "/static/images/project4(2).png",
-        "/static/images/project4(3).png",
+        `${baseUrl}project4(1).png`,
+        `${baseUrl}project4(2).png`,
+        `${baseUrl}project4(3).png`,
       ],
     },
     {
@@ -79,9 +94,9 @@ const projectList = {
       live_link: "https://calebhasch.github.io/Public-API-Requests/",
       github_link: "https://github.com/calebhasch/Public-API-Requests",
       image_urls: [
-        "/static/images/project5(1).png",
-        "/static/images/project5(2).png",
-        "/static/images/project5(3).png",
+        `${baseUrl}project5(1).png`,
+        `${baseUrl}project5(2).png`,
+        `${baseUrl}project5(3).png`,
       ],
     },
     {
@@ -93,9 +108,9 @@ const projectList = {
       live_link: "https://calebhasch.github.io/React-Gallery/",
       github_link: "https://github.com/calebhasch/React-Gallery",
       image_urls: [
-        "/static/images/ReactGallery(Cosmos).png",
-        "/static/images/ReactGallery(cats).png",
-        "/static/images/ReactGallery(NoResults).png",
+        `${baseUrl}ReactGallery(Cosmos).png`,
+        `${baseUrl}ReactGallery(cats).png`,
+        `${baseUrl}ReactGallery(NoResults).png`,
       ],
     },
     {
@@ -116,9 +131,9 @@ const projectList = {
       live_link: "https://calebhaschwtwr.crabdance.com/",
       github_link: "https://github.com/CalebHasch/se_project_react",
       image_urls: [
-        "/static/images/project5(1).png",
-        "/static/images/project5(2).png",
-        "/static/images/project5(3).png",
+        `${baseUrl}project5(1).png`,
+        `${baseUrl}project5(2).png`,
+        `${baseUrl}project5(3).png`,
       ],
     },
     {
@@ -129,9 +144,9 @@ const projectList = {
       live_link: "https://calebhasch.github.io/se_project_aroundtheus/",
       github_link: "https://github.com/CalebHasch/se_project_aroundtheus",
       image_urls: [
-        "/static/images/project5(1).png",
-        "/static/images/project5(2).png",
-        "/static/images/project5(3).png",
+        `${baseUrl}project5(1).png`,
+        `${baseUrl}project5(2).png`,
+        `${baseUrl}project5(3).png`,
       ],
     },
     {
@@ -142,9 +157,9 @@ const projectList = {
       live_link: "https://calebhasch.github.io/Public-API-Requests/",
       github_link: "https://github.com/calebhasch/Tech-degree-project-5",
       image_urls: [
-        "/static/images/project5(1).png",
-        "/static/images/project5(2).png",
-        "/static/images/project5(3).png",
+        `${baseUrl}project5(1).png`,
+        `${baseUrl}project5(2).png`,
+        `${baseUrl}project5(3).png`,
       ],
     },
     {
@@ -155,9 +170,9 @@ const projectList = {
       live_link: "https://calebhasch.github.io/Warrior-Legend/",
       github_link: "https://github.com/CalebHasch/Warrior-Legend",
       image_urls: [
-        "/static/images/project5(1).png",
-        "/static/images/project5(2).png",
-        "/static/images/project5(3).png",
+        `${baseUrl}project5(1).png`,
+        `${baseUrl}project5(2).png`,
+        `${baseUrl}project5(3).png`,
       ],
     },
     {
@@ -168,9 +183,9 @@ const projectList = {
       live_link: "https://calebhasch.github.io/Racing/",
       github_link: "https://github.com/CalebHasch/Racing",
       image_urls: [
-        "/static/images/project5(1).png",
-        "/static/images/project5(2).png",
-        "/static/images/project5(3).png",
+        `${baseUrl}project5(1).png`,
+        `${baseUrl}project5(2).png`,
+        `${baseUrl}project5(3).png`,
       ],
     },
     {
@@ -181,27 +196,12 @@ const projectList = {
       live_link: "https://calebhasch.github.io/Pong/",
       github_link: "https://github.com/CalebHasch/Pong",
       image_urls: [
-        "/static/images/project5(1).png",
-        "/static/images/project5(2).png",
-        "/static/images/project5(3).png",
-      ],
-    },
-    {
-      id: 13,
-      project_name: "Brickbreaker",
-      description: "The classic brickbreaker game.",
-      technologies: ["JavaScript", "HTML", "CSS"],
-      live_link: "https://calebhasch.github.io/brickbreaker/",
-      github_link: "https://github.com/CalebHasch/brickbreaker",
-      image_urls: [
-        "/static/images/project5(1).png",
-        "/static/images/project5(2).png",
-        "/static/images/project5(3).png",
+        `${baseUrl}project5(1).png`,
+        `${baseUrl}project5(2).png`,
+        `${baseUrl}project5(3).png`,
       ],
     },
   ],
 };
 
-const number = { test: "it works" };
-
-export { projectList, number };
+export { projectList };

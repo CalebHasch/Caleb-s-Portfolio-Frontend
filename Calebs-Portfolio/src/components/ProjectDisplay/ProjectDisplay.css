@@ -1,0 +1,14 @@
+.projectList {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 428px);
+  gap: 20px 20px;
+  padding: 0;
+}
+
+.project {
+}
+
+.project__thumbnail {
+  height: 200px;
+}

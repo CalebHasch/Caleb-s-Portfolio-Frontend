@@ -1,13 +1,12 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import { Routes, Route } from "react-router-dom";
 import ProjectDisplay from "../ProjectDisplay/ProjectDisplay";
+import ProjectPage from "../ProjectPage/ProjectPage";
 import "./App.css";
-import projectList from "../../../db.json";
-import { number } from "../../utils/constants";
+import { projectList } from "../../utils/constants";
 
 function App() {
-  const [projects, setProjects] = useState(projectList);
-  console.log(projectList);
-  console.log(number);
+  const [projects, setProjects] = useState(projectList.projects);
 
   // useEffect(() => {
   //   setProjects(projectList);
@@ -15,7 +14,18 @@ function App() {
 
   return (
     <>
-      <ProjectDisplay projects={projects}></ProjectDisplay>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <ProjectDisplay projects={projects} setProjects={setProjects} />
+          }
+        />
+        <Route
+          path="/project/:id"
+          element={<ProjectPage projects={projects} />}
+        />
+      </Routes>
     </>
   );
 }
