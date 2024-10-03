@@ -1,16 +1,34 @@
 import "./ProjectDisplay.css";
 import { NavLink } from "react-router-dom";
+import SearchForm from "../SearchForm/SearchForm";
+import { useState } from "react";
 
-export default function ProjectDisplay({ projects, setProjects }) {
-  function searchProjects(id) {
-    setCurrentProject(projects[id]);
+export default function ProjectDisplay({ projects }) {
+  const [filteredProjects, setFilteredProjects] = useState(projects);
+
+  function searchProjects(query) {
+    const searchQuery = query.toLowerCase();
+    const searchResults = [];
+    projects.forEach((item) => {
+      if (item.project_name.toLowerCase().includes(searchQuery)) {
+        searchResults.push(item);
+      } else {
+        item.technologies.map((tech) => {
+          if (tech.toLowerCase().includes(searchQuery)) {
+            searchResults.push(item);
+          }
+        });
+      }
+    });
+    setFilteredProjects(searchResults);
   }
 
   return (
     <div>
       <p>Projects</p>
+      <SearchForm onSearch={searchProjects} />
       <ul className="projectList">
-        {projects.map((project) => {
+        {filteredProjects.map((project) => {
           return (
             <li key={project.id}>
               <p>{project.project_name}</p>
