@@ -1,31 +1,52 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import ProjectDisplay from "../ProjectDisplay/ProjectDisplay";
 import ProjectPage from "../ProjectPage/ProjectPage";
-import "./App.css";
+import Navbar from "../Navbar/Navbar";
+import About from "../About/About";
+import ProfileCard from "../ProfileCard/ProfileCard";
+import { fetchJoke } from "../../utils/jokeApi";
 import { projectList } from "../../utils/constants";
+import { JokeContext } from "../../contexts/JokeContext";
+import "./App.css";
 
 function App() {
   const [projects, setProjects] = useState(projectList.projects);
+  const [joke, setJoke] = useState({ setup: "", punchline: "" });
 
-  // useEffect(() => {
-  //   setProjects(projectList);
-  // }, []);
+  function getNewJoke() {
+    fetchJoke()
+      .then((res) => {
+        setJoke(res[0]);
+      })
+      .catch(console.error);
+  }
+
+  useEffect(() => {
+    getNewJoke();
+  }, []);
 
   return (
     <>
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <ProjectDisplay projects={projects} setProjects={setProjects} />
-          }
-        />
-        <Route
-          path="/project/:id"
-          element={<ProjectPage projects={projects} />}
-        />
-      </Routes>
+      <JokeContext.Provider value={{ joke, getNewJoke }}>
+        <ProfileCard />
+        <div className="main-content">
+          <Navbar />
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <ProjectDisplay projects={projects} setProjects={setProjects} />
+              }
+            />
+            <Route
+              path="/project/:id"
+              element={<ProjectPage projects={projects} />}
+            />
+            <Route path="profile" element={<About />} />
+          </Routes>
+        </div>
+      </JokeContext.Provider>
     </>
   );
 }

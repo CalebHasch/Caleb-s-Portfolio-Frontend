@@ -1,0 +1,12 @@
+.profile-card {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: black;
+  height: 100%;
+  color: white;
+}
+
+.profile-card__img {
+  height: 350px;
+}

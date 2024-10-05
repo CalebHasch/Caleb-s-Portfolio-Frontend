@@ -1,0 +1,14 @@
+.navbar {
+  display: flex;
+  justify-content: end;
+  position: fixed;
+  top: 0;
+  left: 261px;
+  background-color: aqua;
+  width: calc(100% - 261px);
+}
+
+.navbar__link {
+  color: black;
+  margin: 10px 50px 10px 0;
+}
