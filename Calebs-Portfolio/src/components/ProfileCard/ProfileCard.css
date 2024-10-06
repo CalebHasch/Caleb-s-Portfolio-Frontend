@@ -5,6 +5,7 @@
   background-color: black;
   height: 100%;
   color: white;
+  z-index: 1;
 }
 
 .profile-card__img {

@@ -2,6 +2,7 @@ import "./ProjectDisplay.css";
 import { NavLink } from "react-router-dom";
 import SearchForm from "../SearchForm/SearchForm";
 import { useState } from "react";
+import SearchPrompts from "../SearchPrompts/SearchPrompts";
 
 export default function ProjectDisplay({ projects }) {
   const [filteredProjects, setFilteredProjects] = useState(projects);
@@ -10,7 +11,10 @@ export default function ProjectDisplay({ projects }) {
     const searchQuery = query.toLowerCase();
     const searchResults = [];
     projects.forEach((item) => {
-      if (item.project_name.toLowerCase().includes(searchQuery)) {
+      if (
+        item.project_name.toLowerCase().includes(searchQuery) ||
+        item.tags.includes(searchQuery)
+      ) {
         searchResults.push(item);
       } else {
         item.technologies.map((tech) => {
@@ -25,8 +29,27 @@ export default function ProjectDisplay({ projects }) {
 
   return (
     <div>
-      <p>Projects</p>
+      <h2>My Portfolio</h2>
+      <p>
+        Search through my {projects.length} projects by name, technologies used,
+        or special tags.
+      </p>
       <SearchForm onSearch={searchProjects} />
+      <SearchPrompts
+        buttonText={"Dev's Favorites"}
+        search={searchProjects}
+        prompt={"Favorites"}
+      />
+      <SearchPrompts
+        buttonText={"Games"}
+        search={searchProjects}
+        prompt={"games"}
+      />
+      <SearchPrompts
+        buttonText={"Vanilla"}
+        search={searchProjects}
+        prompt={"vanilla"}
+      />
       <ul className="projectList">
         {filteredProjects.map((project) => {
           return (
