@@ -1,0 +1,29 @@
+.joke-display {
+  /* border: 1 solid white;
+  border-style: double; */
+  margin: 30px 2px 0;
+}
+
+.joke-display__setup {
+  font-style: italic;
+}
+
+.joke-display__punchline {
+  font-weight: 500;
+  margin: 10px 20px;
+}
+
+.joke-display__hidden-punchline {
+  border: 1px solid black;
+  background-color: #9f825b;
+  width: 200px;
+  margin: 10px auto;
+  color: black;
+}
+
+.joke-display__button {
+  position: absolute;
+  bottom: 10px;
+  left: 61px;
+  margin: 0 0 10px;
+}

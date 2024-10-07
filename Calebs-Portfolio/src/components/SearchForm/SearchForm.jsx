@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./SearchForm.css";
 
 export default function SearchForm({ onSearch }) {
   const [searchInput, setSearchInput] = useState("");
@@ -21,9 +22,10 @@ export default function SearchForm({ onSearch }) {
           name="search"
           value={searchInput}
           placeholder="Search..."
+          className="search-form__input"
           required
         />
-        <button type="submit" className="search-button">
+        <button type="submit" className="search-form__button">
           <svg
             fill="#fff"
             height="24"

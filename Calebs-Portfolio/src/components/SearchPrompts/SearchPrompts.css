@@ -1,0 +1,16 @@
+.prompt {
+  /* display: block; */
+  background-color: #7b481c;
+  border-radius: 3px;
+  padding: 5px;
+  color: #fff;
+  margin: 1em;
+}
+
+.prompt:active {
+  background-color: #741102;
+}
+
+.prompt:hover {
+  border-color: #741102;
+}

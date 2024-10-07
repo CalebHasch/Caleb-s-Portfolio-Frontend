@@ -1,12 +1,13 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
+  color: white;
+  background-color: #9f825b;
 }
 
 .main-content {
-  margin-left: 261px;
+  margin-left: 300px;
 }
 
 @keyframes logo-spin {

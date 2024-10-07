@@ -1,5 +1,22 @@
 const baseUrl = "http://127.0.0.1:3000/src/assets/";
 
+const skills = [
+  "JavaScript",
+  "SQL",
+  "MongoDB",
+  "React",
+  "Node.js",
+  "Express",
+  "Pug",
+  "API Handling",
+  "jQuery",
+  "CSS",
+  "HTML",
+  "AJAX",
+  "Terminal Navigation",
+  "Online Communication (slack, discord, zoom, etc.)",
+];
+
 const projectList = {
   projects: [
     {
@@ -239,4 +256,11 @@ const projectList = {
   ],
 };
 
-export { projectList };
+const personalLinks = {
+  link1: "https://github.com/calebhasch",
+  link2: "href=https://www.linkedin.com/in/caleb-hasch-bb80151a8/",
+  link1Text: "Github",
+  link2Text: "LinkedIn",
+};
+
+export { projectList, skills, personalLinks };

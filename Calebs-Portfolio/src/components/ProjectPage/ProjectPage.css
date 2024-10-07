@@ -1,0 +1,11 @@
+.project-page {
+}
+
+.project-page__list {
+  list-style: none;
+  display: grid;
+}
+
+.project-page__img {
+  height: 150px;
+}

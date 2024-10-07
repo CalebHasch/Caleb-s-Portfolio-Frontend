@@ -4,11 +4,15 @@
   position: fixed;
   top: 0;
   left: 261px;
-  background-color: aqua;
+  background-color: #7b481c;
   width: calc(100% - 261px);
 }
 
 .navbar__link {
-  color: black;
+  color: white;
   margin: 10px 50px 10px 0;
+}
+
+.navbar__link:hover {
+  color: black;
 }

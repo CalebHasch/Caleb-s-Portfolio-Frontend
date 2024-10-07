@@ -2,12 +2,22 @@
   position: fixed;
   top: 0;
   left: 0;
-  background-color: black;
+  background-color: #233115;
   height: 100%;
+  width: 320px;
   color: white;
   z-index: 1;
 }
 
+.profile-card__title {
+  margin: 10px;
+  font-size: 40px;
+}
+
 .profile-card__img {
-  height: 350px;
+  height: 300px;
+}
+
+.profile-card__sub-title {
+  margin: 0px;
 }

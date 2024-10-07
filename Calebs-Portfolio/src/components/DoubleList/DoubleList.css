@@ -1,0 +1,21 @@
+.double-list {
+  display: flex;
+  justify-content: space-around;
+}
+
+.double-list__list {
+  list-style: none;
+  padding: 0;
+}
+
+.double-list__list-link {
+  margin-bottom: 12px;
+}
+
+.double-list__link {
+  color: black;
+}
+
+.double-list__link:hover {
+  color: #741102;
+}
