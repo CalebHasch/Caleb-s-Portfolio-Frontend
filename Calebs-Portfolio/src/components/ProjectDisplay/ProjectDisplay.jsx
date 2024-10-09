@@ -50,7 +50,7 @@ export default function ProjectDisplay({ projects }) {
         search={searchProjects}
         prompt={"vanilla"}
       />
-      <ul className="projectList">
+      <ul className="project-display__list">
         {filteredProjects.map((project) => {
           return (
             <li key={project.id}>
@@ -58,7 +58,7 @@ export default function ProjectDisplay({ projects }) {
 
               <NavLink to={`/project/${project.id}`}>
                 <img
-                  className="project__thumbnail"
+                  className="project-display__thumbnail"
                   src={project.image_urls[0]}
                   alt={project.project_name}
                 ></img>

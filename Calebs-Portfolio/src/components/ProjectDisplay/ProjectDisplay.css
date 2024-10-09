@@ -2,7 +2,7 @@
   text-align: center;
 }
 
-.projectList {
+.project-display__list {
   list-style: none;
   display: grid;
   justify-content: center;
@@ -11,9 +11,6 @@
   padding: 0;
 }
 
-.project {
-}
-
-.project__thumbnail {
+.project-display__thumbnail {
   height: 200px;
 }
