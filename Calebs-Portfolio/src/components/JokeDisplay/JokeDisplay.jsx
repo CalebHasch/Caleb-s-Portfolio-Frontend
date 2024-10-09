@@ -14,7 +14,7 @@ export default function JokeDisplay() {
 
   function togglePunchline() {
     setPunchlineDisplayed(true);
-    // window.setTimeout(onClick, 13000);
+    window.setTimeout(onClick, 13000);
   }
 
   useEffect(() => {

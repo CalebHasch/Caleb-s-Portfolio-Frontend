@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import DoubleList from "../DoubleList/DoubleList";
+import SlidingImages from "../SlidingImages/SlidingImages";
 import "./ProjectPage.css";
 
 export default function ProjectPage({ projects }) {
@@ -15,21 +16,9 @@ export default function ProjectPage({ projects }) {
   return (
     <div className="project-page">
       <h3>{project.project_name}</h3>
-      <p>{project.description}</p>
+      <p className="project-page__description">{project.description}</p>
       <DoubleList list1={techList} list2={linkList} title1={"Technologies"} />
-      <ul className="project-page__list">
-        {project.image_urls.map((item, i) => {
-          return (
-            <li key={i}>
-              <img
-                className="project-page__img"
-                src={item}
-                alt={project.project_name}
-              />
-            </li>
-          );
-        })}
-      </ul>
+      <SlidingImages project={project} />
     </div>
   );
 }

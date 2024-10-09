@@ -16,6 +16,7 @@
 
 .profile-card__img {
   height: 300px;
+  border-radius: 50%;
 }
 
 .profile-card__sub-title {

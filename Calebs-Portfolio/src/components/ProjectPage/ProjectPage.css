@@ -1,6 +1,10 @@
 .project-page {
 }
 
+.project-page__description {
+  margin: 0 110px;
+}
+
 .project-page__list {
   list-style: none;
   display: grid;

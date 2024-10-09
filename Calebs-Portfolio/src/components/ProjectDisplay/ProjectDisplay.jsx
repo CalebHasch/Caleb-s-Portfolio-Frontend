@@ -28,7 +28,7 @@ export default function ProjectDisplay({ projects }) {
   }
 
   return (
-    <div>
+    <div className="project-display">
       <h2>My Portfolio</h2>
       <p>
         Search through my {projects.length} projects by name, technologies used,

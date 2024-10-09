@@ -5,12 +5,13 @@
   top: 0;
   left: 261px;
   background-color: #7b481c;
+  height: 57px;
   width: calc(100% - 261px);
 }
 
 .navbar__link {
   color: white;
-  margin: 10px 50px 10px 0;
+  margin-right: 50px;
 }
 
 .navbar__link:hover {
