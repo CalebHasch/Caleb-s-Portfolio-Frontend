@@ -1,20 +1,23 @@
 import { useContext, useState, useEffect, useRef } from "react";
 import { JokeContext } from "../../contexts/JokeContext";
+import { LoadingContext } from "../../contexts/LoadingContext";
+import Preloader from "../Preloader/Preloader";
 import "./JokeDisplay.css";
 
 export default function JokeDisplay() {
   const [punchlineDisplayed, setPunchlineDisplayed] = useState(false);
   const joke = useContext(JokeContext);
+  const isLoading = useContext(LoadingContext);
   const punchlineRef = useRef(null);
 
   function onClick() {
     setPunchlineDisplayed(false);
     joke.getNewJoke();
+    console.log(punchlineRef);
   }
 
   function togglePunchline() {
     setPunchlineDisplayed(true);
-    window.setTimeout(onClick, 13000);
   }
 
   useEffect(() => {
@@ -30,13 +33,23 @@ export default function JokeDisplay() {
 
   return (
     <div className="joke-display">
-      <p className="joke-display__setup">{joke.joke.setup}</p>
-      {punchlineDisplayed ? (
-        <p className="joke-display__punchline">{joke.joke.punchline}</p>
+      {isLoading ? (
+        <Preloader />
       ) : (
-        <p className="joke-display__hidden-punchline" ref={punchlineRef}>
-          Reveal epic punchline!
-        </p>
+        <>
+          <p className="joke-display__setup">{joke.joke.setup}</p>
+          {punchlineDisplayed ? (
+            <p className="joke-display__punchline">{joke.joke.punchline}</p>
+          ) : (
+            <p
+              className="joke-display__hidden-punchline"
+              ref={punchlineRef}
+              onClick={togglePunchline}
+            >
+              Reveal epic punchline!
+            </p>
+          )}
+        </>
       )}
       <button className="joke-display__button" onClick={onClick}>
         Click for a corny joke

@@ -15,7 +15,7 @@ export default function ProfileCard({ isMainProfileHidden, toggleMobileMenu }) {
         />
       )}
       <h2 className="profile-card__title">Caleb Hasch</h2>
-      <NavLink to={"/profile"}>
+      <NavLink to={"/Calebs-Portfolio-Frontend/profile"}>
         <img src={profilePic} alt="Caleb Hasch" className="profile-card__img" />
       </NavLink>
       <h3 className="profile-card__sub-title">Web Developer</h3>

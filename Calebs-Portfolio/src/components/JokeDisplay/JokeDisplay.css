@@ -23,7 +23,6 @@
 
 .joke-display__button {
   position: absolute;
-  bottom: 10px;
+  bottom: 20px;
   left: 61px;
-  margin: 0 0 10px;
 }

@@ -29,29 +29,27 @@ export default function SlidingImages({ project }) {
 
   return (
     <div className="slider">
-      <div className="slider__wrapper">
-        <button
-          className="slider__arrow slider__arrow_prev"
-          ref={prevRef}
-          onClick={scroll.bind(null, -1)}
-        >
-          &#10094;
-        </button>
-        <div className="slider__list">
-          <img
-            className="slider__image"
-            src={project.images[scrollPostition - 1]}
-            alt={project.project_name}
-          />
-        </div>
-        <button
-          className="slider__arrow slider__arrow_next"
-          ref={nextRef}
-          onClick={scroll.bind(null, 1)}
-        >
-          &#10095;
-        </button>
+      <button
+        className="slider__arrow slider__arrow_prev"
+        ref={prevRef}
+        onClick={scroll.bind(null, -1)}
+      >
+        &#10094;
+      </button>
+      <div className="slider__list">
+        <img
+          className="slider__image"
+          src={project.images[scrollPostition - 1]}
+          alt={project.project_name}
+        />
       </div>
+      <button
+        className="slider__arrow slider__arrow_next"
+        ref={nextRef}
+        onClick={scroll.bind(null, 1)}
+      >
+        &#10095;
+      </button>
     </div>
   );
 }

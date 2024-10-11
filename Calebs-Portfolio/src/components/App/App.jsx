@@ -8,6 +8,7 @@ import ProfileCard from "../ProfileCard/ProfileCard";
 import { fetchJoke } from "../../utils/jokeApi";
 import { projectList } from "../../utils/constants";
 import { JokeContext } from "../../contexts/JokeContext";
+import { LoadingContext } from "../../contexts/LoadingContext";
 import "./App.css";
 
 function App() {
@@ -15,14 +16,17 @@ function App() {
   const [joke, setJoke] = useState({ setup: "", punchline: "" });
   const [isMobileMenuOpened, setIsMobileMenuOpened] = useState(false);
   const [isMainProfileHidden, setIsMainProfileHidden] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   const mainContentRef = useRef(null);
 
   function getNewJoke() {
+    setIsLoading(true);
     fetchJoke()
       .then((res) => {
         setJoke(res[0]);
       })
-      .catch(console.error);
+      .catch(console.error)
+      .finally(() => setIsLoading(false));
   }
 
   function toggleMobileMenu() {
@@ -50,37 +54,51 @@ function App() {
 
   return (
     <>
-      <JokeContext.Provider value={{ joke, getNewJoke }}>
-        {(!isMainProfileHidden || isMobileMenuOpened) && (
-          <ProfileCard
-            isMainProfileHidden={isMainProfileHidden}
-            toggleMobileMenu={toggleMobileMenu}
-          />
-        )}
-        <div className="main-content" ref={mainContentRef}>
-          <Navbar
-            isMobileMenuOpened={isMobileMenuOpened}
-            isMainProfileHidden={isMainProfileHidden}
-            toggleMobileMenu={toggleMobileMenu}
-          />
-          <Routes>
-            <Route
-              path="Calebs-Portfolio-Frontend/project/:id"
-              element={<ProjectPage projects={projects} />}
+      <LoadingContext.Provider value={isLoading}>
+        <JokeContext.Provider value={{ joke, getNewJoke }}>
+          {!isMainProfileHidden ? (
+            <ProfileCard
+              isMainProfileHidden={isMainProfileHidden}
+              toggleMobileMenu={toggleMobileMenu}
             />
-            <Route
-              path="Calebs-Portfolio-Frontend/profile"
-              element={<About />}
+          ) : (
+            isMobileMenuOpened && (
+              <div className="modal">
+                <ProfileCard
+                  isMainProfileHidden={isMainProfileHidden}
+                  toggleMobileMenu={toggleMobileMenu}
+                />
+              </div>
+            )
+          )}
+          <div className="main-content" ref={mainContentRef}>
+            <Navbar
+              isMobileMenuOpened={isMobileMenuOpened}
+              isMainProfileHidden={isMainProfileHidden}
+              toggleMobileMenu={toggleMobileMenu}
             />
-            <Route
-              path="*"
-              element={
-                <ProjectDisplay projects={projects} setProjects={setProjects} />
-              }
-            />
-          </Routes>
-        </div>
-      </JokeContext.Provider>
+            <Routes>
+              <Route
+                path="Calebs-Portfolio-Frontend/project/:id"
+                element={<ProjectPage projects={projects} />}
+              />
+              <Route
+                path="Calebs-Portfolio-Frontend/profile"
+                element={<About />}
+              />
+              <Route
+                path="*"
+                element={
+                  <ProjectDisplay
+                    projects={projects}
+                    setProjects={setProjects}
+                  />
+                }
+              />
+            </Routes>
+          </div>
+        </JokeContext.Provider>
+      </LoadingContext.Provider>
     </>
   );
 }

@@ -34,10 +34,16 @@
 }
 
 .profile-card__img {
-  height: 300px;
+  max-height: 45%;
   border-radius: 50%;
 }
 
 .profile-card__sub-title {
   margin: 0px;
+}
+
+@media screen and (max-width: 760px) {
+  .profile-card {
+    left: calc(50% - 160px);
+  }
 }
