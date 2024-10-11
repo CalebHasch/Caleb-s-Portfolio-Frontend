@@ -6,7 +6,6 @@ export default function SlidingImages({ project }) {
   const scrollLength = project.images.length;
   const nextRef = useRef(null);
   const prevRef = useRef(null);
-  const containerRef = useRef(null);
 
   function checkPosition() {
     if (scrollPostition === 1) {
@@ -21,11 +20,6 @@ export default function SlidingImages({ project }) {
 
   function scroll(direction) {
     const newPosition = scrollPostition + direction;
-    const container = containerRef.current;
-    const far = container.offsetWidth * direction;
-    const pos = container.scrollLeft + far;
-
-    container.scrollLeft = pos;
     setScrollPosition(newPosition);
   }
 
@@ -43,19 +37,13 @@ export default function SlidingImages({ project }) {
         >
           &#10094;
         </button>
-        <ul className="slider__list" ref={containerRef}>
-          {project.images.map((item, i) => {
-            return (
-              <li key={i} className="slider__list-item">
-                <img
-                  className="slider__image"
-                  src={item}
-                  alt={project.project_name}
-                />
-              </li>
-            );
-          })}
-        </ul>
+        <div className="slider__list">
+          <img
+            className="slider__image"
+            src={project.images[scrollPostition - 1]}
+            alt={project.project_name}
+          />
+        </div>
         <button
           className="slider__arrow slider__arrow_next"
           ref={nextRef}

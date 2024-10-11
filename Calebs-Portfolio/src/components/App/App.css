@@ -5,8 +5,16 @@
   background-color: #9f825b;
 }
 
+.profile-card-menu {
+  width: 500px;
+}
+
 .main-content {
   margin: 70px 0 0 320px;
+}
+
+.main-content_mobile {
+  margin-left: 0;
 }
 
 .card {

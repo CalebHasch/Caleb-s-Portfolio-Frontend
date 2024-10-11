@@ -3,10 +3,10 @@
   justify-content: end;
   position: fixed;
   top: 0;
-  left: 261px;
+  left: 0;
   background-color: #7b481c;
   height: 57px;
-  width: calc(100% - 261px);
+  width: 100%;
 }
 
 .navbar__link {
@@ -16,4 +16,13 @@
 
 .navbar__link:hover {
   color: black;
+}
+
+.navbar__menu {
+  margin-right: 40px;
+}
+
+.navbar__menu:hover {
+  opacity: 60%;
+  cursor: pointer;
 }
