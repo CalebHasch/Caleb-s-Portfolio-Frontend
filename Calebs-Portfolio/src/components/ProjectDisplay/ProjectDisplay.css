@@ -12,5 +12,6 @@
 }
 
 .project-display__thumbnail {
-  height: 200px;
+  max-height: 200px;
+  margin: 0 10px;
 }
