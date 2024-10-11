@@ -56,10 +56,10 @@ export default function ProjectDisplay({ projects }) {
             <li key={project.id}>
               <p>{project.project_name}</p>
 
-              <NavLink to={`/project/${project.id}`}>
+              <NavLink to={`Calebs-Portfolio-Frontend/project/${project.id}`}>
                 <img
                   className="project-display__thumbnail"
-                  src={project.image_urls[0]}
+                  src={project.images[0]}
                   alt={project.project_name}
                 ></img>
               </NavLink>

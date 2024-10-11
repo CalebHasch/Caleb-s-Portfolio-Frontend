@@ -1,4 +1,48 @@
-const baseUrl = "http://127.0.0.1:3000/src/assets/";
+import about1 from "../assets/about-me(1).png";
+import about2 from "../assets/about-me(2).png";
+import about3 from "../assets/about-me(3).png";
+import aroundTheUS1 from "../assets/Around-the-US(1).png";
+import aroundTheUS2 from "../assets/Around-the-US(2).png";
+import aroundTheUS3 from "../assets/Around-the-US(3).png";
+import brickbreaker1 from "../assets/Brickbreaker(1).png";
+import brickbreaker2 from "../assets/Brickbreaker(2).png";
+import brickbreaker3 from "../assets/Brickbreaker(3).png";
+import coffeeShop1 from "../assets/coffeeshop(1).png";
+import coffeeShop2 from "../assets/coffeeshop(2).png";
+import coffeeShop3 from "../assets/coffeeshop(3).png";
+import coffeeShop4 from "../assets/coffeeshop(4).png";
+import library1 from "../assets/library(1).png";
+import library2 from "../assets/library(2).png";
+import library3 from "../assets/library(3).png";
+import library4 from "../assets/library(4).png";
+import pong1 from "../assets/Pong(1).png";
+import pong2 from "../assets/Pong(2).png";
+import pong3 from "../assets/Pong(3).png";
+import quotes1 from "../assets/project1(1).jpg";
+import quotes2 from "../assets/project1(2).png";
+import quotes3 from "../assets/project1(3).png";
+import pagination1 from "../assets/project2(1).png";
+import pagination2 from "../assets/project2(2).png";
+import pagination3 from "../assets/project2(3).png";
+import form1 from "../assets/project3(1).png";
+import form2 from "../assets/project3(2).png";
+import form3 from "../assets/project3(3).png";
+import gameShow1 from "../assets/project4(1).png";
+import gameShow2 from "../assets/project4(2).png";
+import gameShow3 from "../assets/project4(3).png";
+import publicAPI1 from "../assets/Public-api-requests(1).png";
+import publicAPI2 from "../assets/Public-api-requests(2).png";
+import publicAPI3 from "../assets/Public-api-requests(3).png";
+import racing1 from "../assets/Racing(1).png";
+import racing2 from "../assets/Racing(2).png";
+import racing3 from "../assets/Racing(3).png";
+import gallery1 from "../assets/React-Gallery(1).png";
+import gallery2 from "../assets/React-Gallery(2).png";
+import gallery3 from "../assets/React-Gallery(3).png";
+import wtwr1 from "../assets/WTWR(1).png";
+import wtwr2 from "../assets/WTWR(2).png";
+import wtwr3 from "../assets/WTWR(3).png";
+import wtwr4 from "../assets/WTWR(4).png";
 
 const skills = [
   "JavaScript",
@@ -40,12 +84,7 @@ const projectList = {
       tags: ["favorites", "database", "forms"],
       live_link: "https://calebhaschwtwr.crabdance.com/",
       github_link: "https://github.com/CalebHasch/se_project_react",
-      image_urls: [
-        `${baseUrl}WTWR(2).png`,
-        `${baseUrl}WTWR(3).png`,
-        `${baseUrl}WTWR(4).png`,
-        `${baseUrl}WTWR(1).png`,
-      ],
+      images: [wtwr1, wtwr2, wtwr3, wtwr4],
     },
     {
       id: 1,
@@ -56,11 +95,7 @@ const projectList = {
       tags: ["favorites", "search"],
       live_link: "https://calebhasch.github.io/React-Gallery/",
       github_link: "https://github.com/calebhasch/React-Gallery",
-      image_urls: [
-        `${baseUrl}React-gallery(1).png`,
-        `${baseUrl}React-gallery(2).png`,
-        `${baseUrl}React-gallery(3).png`,
-      ],
+      images: [gallery1, gallery2, gallery3],
     },
     {
       id: 2,
@@ -70,11 +105,7 @@ const projectList = {
       tags: ["favorites", "database", "forms"],
       live_link: "https://calebhasch.github.io/se_project_aroundtheus/",
       github_link: "https://github.com/CalebHasch/se_project_aroundtheus",
-      image_urls: [
-        `${baseUrl}Around-the-US(1).png`,
-        `${baseUrl}Around-the-US(2).png`,
-        `${baseUrl}Around-the-US(3).png`,
-      ],
+      images: [aroundTheUS1, aroundTheUS2, aroundTheUS3],
     },
     {
       id: 3,
@@ -85,11 +116,7 @@ const projectList = {
       tags: ["games"],
       live_link: "https://calebhasch.github.io/OOP-Game-Show-App/",
       github_link: "https://github.com/calebhasch/OOP-Game-Show-App",
-      image_urls: [
-        `${baseUrl}project4(1).png`,
-        `${baseUrl}project4(2).png`,
-        `${baseUrl}project4(3).png`,
-      ],
+      images: [gameShow1, gameShow2, gameShow3],
     },
     {
       id: 4,
@@ -100,12 +127,7 @@ const projectList = {
       tags: ["vanilla"],
       live_link: "https://calebhasch.github.io/se_project_coffeeshop/",
       github_link: "https://github.com/calebhasch/Tech-degree-project-5",
-      image_urls: [
-        `${baseUrl}coffeeshop(1).png`,
-        `${baseUrl}coffeeshop(2).png`,
-        `${baseUrl}coffeeshop(3).png`,
-        `${baseUrl}coffeeshop(4).png`,
-      ],
+      images: [coffeeShop1, coffeeShop2, coffeeShop3, coffeeShop4],
     },
     {
       id: 5,
@@ -117,11 +139,7 @@ const projectList = {
       live_link: "https://calebhasch.github.io/list-and-pagination-filtering/",
       github_link:
         "https://github.com/calebhasch/list-and-pagination-filtering",
-      image_urls: [
-        `${baseUrl}project2(1).png`,
-        `${baseUrl}project2(2).png`,
-        `${baseUrl}project2(3).png`,
-      ],
+      images: [pagination1, pagination2, pagination3],
     },
     {
       id: 6,
@@ -131,11 +149,7 @@ const projectList = {
       tags: ["games"],
       live_link: "https://calebhasch.github.io/Racing/",
       github_link: "https://github.com/CalebHasch/Racing",
-      image_urls: [
-        `${baseUrl}Racing(1).png`,
-        `${baseUrl}Racing(2).png`,
-        `${baseUrl}Racing(3).png`,
-      ],
+      images: [racing1, racing2, racing3],
     },
     {
       id: 7,
@@ -154,11 +168,7 @@ const projectList = {
       tags: [],
       live_link: "https://calebhasch.github.io/Public-API-Requests/",
       github_link: "https://github.com/calebhasch/Public-API-Requests",
-      image_urls: [
-        `${baseUrl}Public-api-requests(1).png`,
-        `${baseUrl}Public-api-requests(2).png`,
-        `${baseUrl}Public-api-requests(3).png`,
-      ],
+      images: [publicAPI1, publicAPI2, publicAPI3],
     },
 
     {
@@ -169,11 +179,7 @@ const projectList = {
       tags: ["vanilla"],
       live_link: "https://calebhasch.github.io/about-me/",
       github_link: "https://github.com/CalebHasch/about-me",
-      image_urls: [
-        `${baseUrl}about-me(1).png`,
-        `${baseUrl}about-me(2).png`,
-        `${baseUrl}about-me(3).png`,
-      ],
+      images: [about1, about2, about3],
     },
     {
       id: 9,
@@ -183,11 +189,7 @@ const projectList = {
       tags: ["games"],
       live_link: "https://calebhasch.github.io/brickbreaker/",
       github_link: "https://github.com/CalebHasch/brickbreaker",
-      image_urls: [
-        `${baseUrl}Brickbreaker(1).png`,
-        `${baseUrl}Brickbreaker(2).png`,
-        `${baseUrl}Brickbreaker(3).png`,
-      ],
+      images: [brickbreaker1, brickbreaker2, brickbreaker3],
     },
     {
       id: 10,
@@ -203,11 +205,7 @@ const projectList = {
       tags: ["forms"],
       live_link: "https://calebhasch.github.io/interactive-form/",
       github_link: "https://github.com/calebhasch/interactive-form",
-      image_urls: [
-        `${baseUrl}project3(1).png`,
-        `${baseUrl}project3(2).png`,
-        `${baseUrl}project3(3).png`,
-      ],
+      images: [form1, form2, form3],
     },
     {
       id: 11,
@@ -218,11 +216,7 @@ const projectList = {
       tags: ["vanilla"],
       live_link: "https://calebhasch.github.io/Random-quote-generator/",
       github_link: "https://github.com/calebhasch/Random-quote-generator",
-      image_urls: [
-        `${baseUrl}project1(1).jpg`,
-        `${baseUrl}project1(2).png`,
-        `${baseUrl}project1(3).png`,
-      ],
+      images: [quotes1, quotes2, quotes3],
     },
     {
       id: 12,
@@ -232,12 +226,7 @@ const projectList = {
       tags: ["vanilla"],
       live_link: "https://calebhasch.github.io/se-project-library/",
       github_link: "https://github.com/CalebHasch/se-project-library",
-      image_urls: [
-        `${baseUrl}library(1).png`,
-        `${baseUrl}library(2).png`,
-        `${baseUrl}library(3).png`,
-        `${baseUrl}library(4).png`,
-      ],
+      images: [library1, library2, library3, library4],
     },
     {
       id: 13,
@@ -247,11 +236,7 @@ const projectList = {
       tags: ["games"],
       live_link: "https://calebhasch.github.io/Pong/",
       github_link: "https://github.com/CalebHasch/Pong",
-      image_urls: [
-        `${baseUrl}Pong(1).png`,
-        `${baseUrl}Pong(2).png`,
-        `${baseUrl}Pong(3).png`,
-      ],
+      images: [pong1, pong2, pong3],
     },
   ],
 };

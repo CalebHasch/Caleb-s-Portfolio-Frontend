@@ -3,7 +3,7 @@ import "./SlidingImages.css";
 
 export default function SlidingImages({ project }) {
   const [scrollPostition, setScrollPosition] = useState(1);
-  const scrollLength = project.image_urls.length;
+  const scrollLength = project.images.length;
   const nextRef = useRef(null);
   const prevRef = useRef(null);
   const containerRef = useRef(null);
@@ -44,7 +44,7 @@ export default function SlidingImages({ project }) {
           &#10094;
         </button>
         <ul className="slider__list" ref={containerRef}>
-          {project.image_urls.map((item, i) => {
+          {project.images.map((item, i) => {
             return (
               <li key={i} className="slider__list-item">
                 <img

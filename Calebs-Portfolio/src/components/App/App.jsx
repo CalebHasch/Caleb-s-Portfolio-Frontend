@@ -33,17 +33,26 @@ function App() {
         <div className="main-content">
           <Navbar />
           <Routes>
-            <Route
+            {/* <Route
               path="/"
               element={
                 <ProjectDisplay projects={projects} setProjects={setProjects} />
               }
-            />
+            /> */}
             <Route
-              path="/project/:id"
+              path="Calebs-Portfolio-Frontend/project/:id"
               element={<ProjectPage projects={projects} />}
             />
-            <Route path="profile" element={<About />} />
+            <Route
+              path="Calebs-Portfolio-Frontend/profile"
+              element={<About />}
+            />
+            <Route
+              path="*"
+              element={
+                <ProjectDisplay projects={projects} setProjects={setProjects} />
+              }
+            />
           </Routes>
         </div>
       </JokeContext.Provider>
