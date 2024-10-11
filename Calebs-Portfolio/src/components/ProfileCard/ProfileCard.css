@@ -49,7 +49,7 @@
   }
 }
 
-@media screen and (max-width: 258px) {
+@media screen and (max-width: 500px) {
   .profile-card {
     top: 10%;
     left: calc(50% - 160px);
