@@ -2,6 +2,11 @@
   text-align: center;
 }
 
+.project-display__text {
+  max-width: 90%;
+  margin: 15px auto;
+}
+
 .project-display__list {
   list-style: none;
   display: grid;

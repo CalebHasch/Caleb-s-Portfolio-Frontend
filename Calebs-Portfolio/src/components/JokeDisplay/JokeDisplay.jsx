@@ -1,13 +1,11 @@
 import { useContext, useState } from "react";
 import { JokeContext } from "../../contexts/JokeContext";
-import { LoadingContext } from "../../contexts/LoadingContext";
 import Preloader from "../Preloader/Preloader";
 import "./JokeDisplay.css";
 
 export default function JokeDisplay() {
   const [punchlineDisplayed, setPunchlineDisplayed] = useState(false);
   const joke = useContext(JokeContext);
-  const isLoading = useContext(LoadingContext);
 
   function onClick() {
     setPunchlineDisplayed(false);
@@ -21,7 +19,7 @@ export default function JokeDisplay() {
 
   return (
     <div className="joke-display">
-      {isLoading ? (
+      {joke.isLoading ? (
         <Preloader />
       ) : (
         <div>

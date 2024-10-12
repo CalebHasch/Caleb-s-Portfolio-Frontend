@@ -6,7 +6,7 @@ export default function About() {
   return (
     <div className="about">
       <h3 className="about__title">About Me</h3>
-      <p>
+      <p className="about__text">
         I am a full stack JavaScript developer. I have gained experience
         Treehouse and Tripleten certifications as well as on the job experience
         through a startup called WeOwesk. I have worked on many personal

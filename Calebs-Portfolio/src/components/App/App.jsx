@@ -5,6 +5,7 @@ import ProjectPage from "../ProjectPage/ProjectPage";
 import Navbar from "../Navbar/Navbar";
 import About from "../About/About";
 import ProfileCard from "../ProfileCard/ProfileCard";
+import Footer from "../Footer/Footer";
 import { fetchJoke } from "../../utils/jokeApi";
 import { projectList } from "../../utils/constants";
 import { JokeContext } from "../../contexts/JokeContext";
@@ -17,6 +18,7 @@ function App() {
   const [isMobileMenuOpened, setIsMobileMenuOpened] = useState(false);
   const [isMainProfileHidden, setIsMainProfileHidden] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
+  const [searchLoading, setSearchLoading] = useState(false);
   const mainContentRef = useRef(null);
 
   function getNewJoke() {
@@ -54,8 +56,8 @@ function App() {
 
   return (
     <>
-      <LoadingContext.Provider value={isLoading}>
-        <JokeContext.Provider value={{ joke, getNewJoke }}>
+      <LoadingContext.Provider value={{ searchLoading, setSearchLoading }}>
+        <JokeContext.Provider value={{ joke, getNewJoke, isLoading }}>
           {!isMainProfileHidden ? (
             <ProfileCard
               isMainProfileHidden={isMainProfileHidden}
@@ -96,6 +98,7 @@ function App() {
                 }
               />
             </Routes>
+            <Footer />
           </div>
         </JokeContext.Provider>
       </LoadingContext.Provider>
