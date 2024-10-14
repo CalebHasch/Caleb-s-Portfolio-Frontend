@@ -1,8 +1,12 @@
-# React + Vite
+# Caleb's Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Description:
+This app showcaseses many projects I've worked as well as the skills I have and technology I'm familiar with.
 
-Currently, two official plugins are available:
+Technologies:
+React, Vite, js, css, 3rd party API
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Domain Name:
+https://calebhasch.github.io/Calebs-Portfolio-Frontend/
+
+For Reviewer: please look at the main page as well as the WTWR project page https://calebhasch.github.io/Calebs-Portfolio-Frontend/project/0

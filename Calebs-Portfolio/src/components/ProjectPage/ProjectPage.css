@@ -1,0 +1,17 @@
+.project-page {
+}
+
+.project-page__description {
+  margin: 0 110px;
+}
+
+.project-page__list {
+  list-style: none;
+  display: grid;
+}
+
+@media screen and (max-width: 950px) {
+  .project-page__description {
+    margin: 0 15px;
+  }
+}

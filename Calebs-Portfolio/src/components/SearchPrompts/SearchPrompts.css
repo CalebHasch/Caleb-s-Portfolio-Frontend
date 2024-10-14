@@ -1,0 +1,21 @@
+.prompt {
+  /* display: block; */
+  background-color: #7b481c;
+  border-radius: 3px;
+  padding: 5px;
+  color: #fff;
+  margin: 1em;
+}
+
+.prompt:focus {
+  background-color: #741102;
+}
+
+.prompt:active {
+  background-color: brown;
+}
+
+.prompt:hover {
+  border-color: #741102;
+  opacity: 70%;
+}

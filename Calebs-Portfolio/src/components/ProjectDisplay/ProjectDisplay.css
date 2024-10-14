@@ -1,0 +1,31 @@
+.project-display {
+  text-align: center;
+}
+
+.project-display__text {
+  max-width: 90%;
+  margin: 15px auto;
+}
+
+.project-display__list {
+  list-style: none;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, 428px);
+  gap: 20px;
+  padding: 0;
+}
+
+.project-display__thumbnail {
+  max-height: 200px;
+}
+
+@media screen and (max-width: 500px) {
+  .project-display__list {
+    grid-template-columns: 100%;
+  }
+
+  .project-display__thumbnail {
+    max-width: 90%;
+  }
+}

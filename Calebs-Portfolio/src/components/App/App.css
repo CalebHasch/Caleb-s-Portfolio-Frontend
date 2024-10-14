@@ -1,0 +1,32 @@
+#root {
+  width: 100%;
+  min-height: 100vh;
+  text-align: center;
+  color: white;
+  background-color: #9f825b;
+}
+
+.modal {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  background-color: rgba(0, 0, 0, 50%);
+  z-index: 2;
+}
+
+.main-content {
+  margin: 70px 0 0 320px;
+}
+
+.main-content_mobile {
+  margin-left: 0;
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
