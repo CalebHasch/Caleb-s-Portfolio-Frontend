@@ -243,7 +243,7 @@ const projectList = {
 
 const personalLinks = {
   link1: "https://github.com/calebhasch",
-  link2: "href=https://www.linkedin.com/in/caleb-hasch-bb80151a8/",
+  link2: "https://www.linkedin.com/in/caleb-hasch-bb80151a8/",
   link1Text: "Github",
   link2Text: "LinkedIn",
 };
