@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { JokeContext } from "../../contexts/JokeContext";
 import Preloader from "../Preloader/Preloader";
 import "./JokeDisplay.css";
@@ -14,8 +14,19 @@ export default function JokeDisplay() {
 
   function togglePunchline() {
     setPunchlineDisplayed(true);
-    setTimeout(onClick, 10000);
   }
+
+  useEffect(() => {
+    let id;
+
+    if (punchlineDisplayed) {
+      id = setTimeout(() => {
+        onClick();
+      }, 10000);
+    }
+
+    return () => clearTimeout(id);
+  }, [punchlineDisplayed]);
 
   return (
     <div className="joke-display">
